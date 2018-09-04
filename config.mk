@@ -148,6 +148,7 @@ SRCS_all += Apps/System/notification.c
 
 include hw/chip/stm32f4xx/config.mk
 include hw/chip/stm32f2xx/config.mk
+include hw/chip/stm32l4xx/config.mk
 include hw/drivers/stm32_dma/config.mk
 include hw/drivers/stm32_spi/config.mk
 include hw/drivers/stm32_usart/config.mk
@@ -157,6 +158,7 @@ include hw/drivers/stm32_rtc/config.mk
 include hw/drivers/stm32_backlight/config.mk
 include hw/drivers/stm32_bluetooth_cc256x/config.mk
 include hw/platform/snowy_family/config.mk
+include hw/platform/chaohu/config.mk
 include hw/platform/snowy/config.mk
 include hw/platform/tintin/config.mk
 include hw/platform/chalk/config.mk

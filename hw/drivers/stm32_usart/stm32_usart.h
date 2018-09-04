@@ -9,12 +9,16 @@
  */
 #pragma once
 #if defined(STM32F4XX)
-#    include "stm32f4xx.h"
+    #include "stm32f4xx.h"
 #elif defined(STM32F2XX)
-#    include "stm32f2xx.h"
+    #include "stm32f2xx.h"
+#elif defined(STM32L4XX)
+    #include "stm32l4xx.h"
+    #include "stm32l476xx.h"
 #else
-#    error "I have no idea what kind of stm32 this is; sorry"
+    #error "I have no idea what kind of stm32 this is; sorry"
 #endif
+
 
 #include <stdint.h>
 #include "stm32_dma.h"

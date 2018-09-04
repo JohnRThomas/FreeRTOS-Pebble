@@ -19,10 +19,14 @@
 
 
 /* XXX this is not portable yet, and really needs to get split into hw/ */
-#ifdef STM32F2XX
-#include "stm32f2xx.h"
+#if defined(STM32F4XX)
+    #include "stm32f4xx.h"
+#elif defined(STM32F2XX)
+    #include "stm32f2xx.h"
+#elif defined(STM32L4XX)
+    #include "stm32l4xx.h"
 #else
-#include "stm32f4xx.h"
+    #error "I have no idea what kind of stm32 this is; sorry"
 #endif
 
 

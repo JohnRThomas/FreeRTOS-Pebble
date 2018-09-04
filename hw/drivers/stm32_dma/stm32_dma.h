@@ -11,11 +11,15 @@
 
 #define STM32_DMA_MK_FLAGS(CHAN) DMA_FLAG_FEIF##CHAN|DMA_FLAG_DMEIF##CHAN|DMA_FLAG_TEIF##CHAN|DMA_FLAG_HTIF##CHAN|DMA_FLAG_TCIF##CHAN
 
-
 const typedef struct {
     uint32_t dma_clock;
+#ifdef STM32L4XX
+    DMA_Channel_TypeDef *dma_tx_stream;
+    DMA_Channel_TypeDef *dma_rx_stream;
+#else
     DMA_Stream_TypeDef *dma_tx_stream;
     DMA_Stream_TypeDef *dma_rx_stream;
+#endif
     uint32_t dma_tx_channel;
     uint32_t dma_rx_channel;
     uint8_t dma_irq_tx_pri;
@@ -30,7 +34,6 @@ const typedef struct {
 
 typedef void (*dma_callback)(void);
 
-   
 void stm32_dma_init_device(stm32_dma_t *dma);
 void stm32_dma_tx_disable(stm32_dma_t *dma);
 void stm32_dma_tx_init(stm32_dma_t *dma, void *periph_address, uint8_t *data, size_t len, uint8_t mem_inc);

@@ -34,6 +34,14 @@
        X(AHB3, 1) \
        X(APB1, 30) \
        X(APB2, 18)
+#elif defined(STM32L4XX)
+//THIS IS NOT CORRECT!!!
+#    define STM32_POWER_EXPANDO(X) \
+       X(AHB1, 31) \
+       X(AHB2, 8) \
+       X(AHB3, 1) \
+       X(APB1, 30) \
+       X(APB2, 18)
 #else
 #    error "I have no idea what kind of stm32 this is; sorry"
 #endif

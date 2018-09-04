@@ -15,11 +15,13 @@
 #endif
 
 #if defined REBBLE_PLATFORM_TINTIN
-#define PBL_PLATFORM_SWITCH(tintin, snowy, chalk, diorite, emery) (tintin)
+#define PBL_PLATFORM_SWITCH(tintin, snowy, chalk, diorite, emery, chaohu) (tintin)
 #elif defined REBBLE_PLATFORM_SNOWY
-#define PBL_PLATFORM_SWITCH(tintin, snowy, chalk, diorite, emery) (snowy)
+#define PBL_PLATFORM_SWITCH(tintin, snowy, chalk, diorite, emery, chaohu) (snowy)
 #elif defined REBBLE_PLATFORM_CHALK
-#define PBL_PLATFORM_SWITCH(tintin, snowy, chalk, diorite, emery) (chalk)
+#define PBL_PLATFORM_SWITCH(tintin, snowy, chalk, diorite, emery, chaohu) (chalk)
+#elif defined REBBLE_PLATFORM_CHAOHU
+#define PBL_PLATFORM_SWITCH(tintin, snowy, chalk, diorite, emery, chaohu) (chaohu)
 #else
 #error Add the new platform to PBL_PLATFORM_SWITCH in pebble_defines.h
 #endif

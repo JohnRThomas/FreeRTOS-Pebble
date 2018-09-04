@@ -12,7 +12,7 @@
 #include "size.h"
 #include "bitmap_layer.h"
 
-#define STATUS_BAR_LAYER_HEIGHT (PBL_PLATFORM_SWITCH(16, 16, 24, 16, 20))
+#define STATUS_BAR_LAYER_HEIGHT (PBL_PLATFORM_SWITCH(16, 16, 24, 16, 20, 24))
 
 typedef enum StatusBarLayerSeparatorMode
 {

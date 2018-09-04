@@ -25,6 +25,12 @@
 #    include "stm32f2xx_syscfg.h"
 #    include "stm32f2xx_rcc.h"
 #    include "misc.h"
+#elif defined(STM32L4XX)
+#    include "stm32l4xx.h"
+#    include "stm32l4xx_gpio.h"
+#    include "stm32l4xx_exti.h"
+#    include "stm32l4xx_rcc.h"
+#    include "stm32l4xx_macro_translation.h"
 #else
 #    error "I have no idea what kind of stm32 this is; sorry"
 #endif
